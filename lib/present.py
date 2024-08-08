@@ -1,0 +1,20 @@
+class Present():
+    def __init__(self):
+        self.contents = None
+
+    def wrap(self, contents):
+        print(f"Line 6 {self.contents}")
+        if self.contents is not None:
+            raise Exception("A contents has already been wrapped.")
+        self.contents = contents
+        print(f"Line 10 {self.contents}")
+        
+    def unwrap(self):
+        if self.contents is None:
+            raise Exception("No contents have been wrapped.")
+        return self.contents
+
+# present = Present()
+# print(present.wrap())
+# print(present.contents)
+# print(present.unwrap())
